@@ -79,8 +79,7 @@ public class Cart {
         System.out.println("=== Total items in cart: " + qtyOrdered + " ===");
         System.out.println("=== All items in cart ===");
         for(int i = 0; i < qtyOrdered; i++) {
-            System.out.println("[Title]: " + itemsInCart[i].getTitle() + ", "
-                    + "[Cost]: " + itemsInCart[i].getCost());
+            System.out.println(itemsInCart[i].toString());
         }
     }
 
