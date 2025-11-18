@@ -11,7 +11,6 @@ public class Aims {
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation",
                 "Roger Allers", 87, 19.95);
 
-
         DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction",
                 "Geogle Lucas", 87, 24.45);
 
@@ -28,6 +27,12 @@ public class Aims {
         System.out.println();
 
         cart.removeDVD(dvd2);
+        cart.removeDVD(dvd1);
+        cart.print();
+
+        System.out.println();
+
+        cart.addDVD(dvd1, dvd2);
         cart.print();
     }
 }
