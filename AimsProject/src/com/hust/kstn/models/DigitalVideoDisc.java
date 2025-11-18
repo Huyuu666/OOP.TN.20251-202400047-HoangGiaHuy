@@ -7,7 +7,11 @@ public class DigitalVideoDisc {
     private String director;
     private int length;
     private double cost;
-    private static int  nbDigitalVideoDiscs= 0;
+    private static int nbDigitalVideoDiscs = 0;
+
+    public int getId() {
+        return id;
+    }
 
     public String getTitle() {
         return title;
