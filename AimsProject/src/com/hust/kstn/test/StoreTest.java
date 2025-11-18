@@ -8,12 +8,12 @@ public class StoreTest {
     public static void main(String[] args) {
         Store store = new Store();
 
-        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation",
-                "Roger Allers", 87, 19.95);
-        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction",
-                "Geogle Lucas", 87, 24.45);
-        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Without Family", "Animation",
-                "Hector Malot", 87, 21.1);
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", 19.95,"Animation",
+                "Roger Allers", 87);
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", 24.45, "Science Fiction",
+                "Geogle Lucas", 87);
+        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Without Family", 21.1, "Animation",
+                "Hector Malot", 87);
 
         store.removeDVD(dvd1); //Khong xoa duoc khi gio hang rong
         System.out.println();

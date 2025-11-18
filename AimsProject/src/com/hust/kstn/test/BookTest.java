@@ -17,7 +17,7 @@ public class BookTest {
         bookAuthors.add(ba1);
         bookAuthors.add(ba2);
 
-        Book book = new Book("10 van cau hoi vi sao", "Science", 10.0,
+        Book book = new Book("10 van cau hoi vi sao", 10.0, "Science",
                 bookAuthors, 100);
         System.out.print(book.toString());
     }
