@@ -1,0 +1,39 @@
+1. Sau khi chạy phương thức swap(s1,s2) thì tên của hai học sinh vẫn không
+thay đổi bởi vì trong Java, tham số truyền vào phương thức luôn là truyền tham trị (pass-by-value).
+Khi gọi swap(s1, s2), các biến o1 và o2 trong phương thức nhận bản sao của tham chiếu s1 và s2.
+Tức là o1, o2 trỏ tới đối tượng s1, s2 trỏ đến. Sau đó, swap chỉ tráo đổi đối tượng o1, o2 trỏ đến,
+không ảnh hưởng đến s1 và s2 trong main.
+2. Để phương thức swap hoạt động, thay vì đổi tham chiếu, ta đổi trực tiếp thuộc tính của đối tượng:
+// them setter vao class Student
+public static void swap(Student s1, Student s2) {
+    int tmpId = s1.getStudentId();
+    String tmpName = s1.getStudentName();
+    s1.setStudentName(s2.getStudentName());
+    s1.setStudentId(s2.getStudentId);
+    s2.setStudentId(tmpId);
+    s2.setStudentName(tmpName);
+}
+3. Sơ đồ minh họa stack và heap
+* Trước khi gọi swap(s1, s2):
+- Heap
+    + Student(1,"A")
+    + Student(2,"B")
+- Stack
+    + s1 → tham chiếu đến Student(1,"A") trong heap
+    + s2 → tham chiếu đến Student(2,"B") trong heap
+
+ * Gọi swap(s1, s2):
+- Heap
+    + Student(1,"A")
+    + Student(2,"B")
+- Stack
+    + s1 → tham chiếu đến Student(1,"A") trong heap
+    + s2 → tham chiếu đến Student(2,"B") trong heap
+
+    + Tạo ra o1 tham chiếu đến Student(1,"A") trong heap(bản sao của tham chiếu s1)
+    + Tạo ra o2 tham chiếu đến Student(2,"B") trong heap (bản sao của tham chiếu s2)
+    + tmp tham chiếu đến Student(1,"A") (bản sao của tham chiếu 01)
+
+    + o1 tham chiếu đến Student(2,"B") trong heap
+    + o2 tham chiếu đến Student(1,"A") trong heap
+=> s1, s2 không thay đổi
