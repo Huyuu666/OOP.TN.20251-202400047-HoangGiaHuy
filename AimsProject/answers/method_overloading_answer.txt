@@ -1,0 +1,7 @@
+1. Khi thử thêm phương thức addDVD(DigitalVideoDisc …discs):
+Java coi DigitalVideoDisc... là DigitalVideoDisc[] trong quá trình biên dịch.
+Do đó, hai phương thức này có chữ ký (signature) giống nhau
+→ gây lỗi vì trùng lặp (method overloading không hợp lệ).
+
+2. Giải pháp: Giữ lại một phương thức duy nhất
+
