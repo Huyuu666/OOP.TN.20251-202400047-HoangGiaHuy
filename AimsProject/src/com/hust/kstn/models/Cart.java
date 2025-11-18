@@ -5,8 +5,7 @@ public class Cart {
     private final DigitalVideoDisc[] itemsInCart = new DigitalVideoDisc[MAX_NUMBER_ORDERED];
     private int qtyOrdered = 0;
 
-    public Cart() {
-    }
+    public Cart() {}
 
     public void addDVD(DigitalVideoDisc disc) {
         if (qtyOrdered >= MAX_NUMBER_ORDERED) {
