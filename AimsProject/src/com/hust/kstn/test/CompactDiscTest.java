@@ -23,7 +23,7 @@ public class CompactDiscTest {
         List<String> directors = new ArrayList<>();
         directors.add("GH");
 
-        CompactDisc compactDisc = new CompactDisc("Chill", "Love", 20, artists,
+        CompactDisc compactDisc = new CompactDisc("Chill", 20,"Love", artists,
                 directors, tracks);
 
         System.out.println(compactDisc.toString());

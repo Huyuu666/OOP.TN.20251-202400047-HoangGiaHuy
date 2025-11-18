@@ -1,0 +1,4 @@
+Từ khóa super(...) trong ví dụ dùng để:
+- Gọi constructor/method của lớp cha (Media/Disc).
+- Trong constructor của lớp con phải đặt ở dòng đầu tiên.
+- Giúp lớp con khởi tạo các thuộc tính kế thừa từ lớp cha hoặc khởi tạo/sử dụng các method đã có ở lớp cha

@@ -3,27 +3,14 @@ package com.hust.kstn.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompactDisc {
-    private int id;
-    private String title;
-    private String category;
-    private double cost;
+public class CompactDisc extends Disc{
     private List<String> artists = new ArrayList<>();
     private List<String> directors = new ArrayList<>();
     private List<Track> tracks = new ArrayList<>();
-    private static int nbCompactDisc  = 0;
 
-    public CompactDisc() {
-        nbCompactDisc++;
-        this.id = nbCompactDisc;
-    }
-    public CompactDisc(String title, String category, double cost, List<String> artists,
+    public CompactDisc(String title, double cost, String category, List<String> artists,
                        List<String> directors, List<Track> tracks) {
-        nbCompactDisc++;
-        this.id = nbCompactDisc;
-        this.title = title;
-        this.category = category;
-        this.cost = cost;
+        super(title, cost, category);
         this.artists = artists;
         this.directors = directors;
         this.tracks = tracks;
@@ -36,21 +23,6 @@ public class CompactDisc {
             l += t.getLength();
         }
         return l;
-    }
-    public int getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public double getCost() {
-        return cost;
     }
 
     public List<String> getArtists() {
@@ -81,11 +53,8 @@ public class CompactDisc {
 
     @Override
     public String toString() {
-        return "- CompactDisc[" + this.id + "] - ["
-                + this.title + "] - ["
-                + this.cost + "] - ["
-                + this.category + "] - ["
-                + totalLength()+ "]"
+        return super.toString()
+                + " - [" + totalLength()+ " ]"
                 + "\nartists: " + this.artists
                 + "\ndirectors: " + this.directors
                 + "\ntracks: " + this.tracks;
